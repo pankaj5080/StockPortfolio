@@ -1,0 +1,201 @@
+<div class="container-scroller">
+  <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="navbar-menu-wrapper d-flex align-items-center">
+      <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Portfolios
+            <span class="badge badge-primary ml-1">New</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="#" class="nav-link">
+            <i class="mdi mdi-elevation-rise"></i>Create Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="mdi mdi-bookmark-plus-outline"></i>Score</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container-fluid page-body-wrapper">
+        <div class="main-panel col-lg-12">
+            <div class="content-wrapper">
+              <!-- Porfolios -->
+              <div class="row" [hidden]="isPortfoliosHidden">
+                <div class="col-lg-6 grid-margin stretch-card"  (click)="showPortfolioDetials()">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 >Portfolio Name 1</h3>
+                      <!-- <canvas id="lineChart" style="height:250px"></canvas> -->
+                      <span>Portfolio Strategy: Strategy 1</span><br/><br/>
+                      <div>
+                        <span>Cash Deployed: 2,75,000</span>
+                        <span style="float:right">Total Profit: 25000</span>
+                      </div>
+                      <div>
+                        <span>Cash in Hand: 0</span>
+                        <span style="float:right">Percentage Gain: 10</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 grid-margin stretch-card" (click)="showPortfolioDetials()">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 >Portfolio Name 2</h3>
+                      <span>Portfolio Strategy: Strategy 2</span><br/><br/>
+                      <div>
+                        <span>Cash Deployed: 2,75,000</span>
+                        <span style="float:right">Total Profit: 25000</span>
+                      </div>
+                      <div>
+                        <span>Cash in Hand: 0</span>
+                        <span style="float:right">Percentage Gain: 10</span>
+                      </div><!-- <canvas id="barChart" style="height:230px"></canvas> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 grid-margin stretch-card" (click)="showPortfolioDetials()">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 >Portfolio Name 3</h3>
+                        <span>Portfolio Strategy: Strategy 3</span><br/><br/>
+                        <div>
+                          <span>Cash Deployed: 2,75,000</span>
+                          <span style="float:right">Total Profit: 25000</span>
+                        </div>
+                        <div>
+                          <span>Cash in Hand: 0</span>
+                          <span style="float:right">Percentage Gain: 10</span>
+                        </div><!-- <canvas id="barChart" style="height:230px"></canvas> -->
+                      </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 grid-margin stretch-card" (click)="showPortfolioDetials()">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 >Portfolio Name 4</h3>
+                        <span>Portfolio Strategy: Strategy 4</span><br/><br/>
+                        <div>
+                          <span>Cash Deployed: 2,75,000</span>
+                          <span style="float:right">Total Profit: 25000</span>
+                        </div>
+                        <div>
+                          <span>Cash in Hand: 0</span>
+                          <span style="float:right">Percentage Gain: 10</span>
+                        </div><!-- <canvas id="barChart" style="height:230px"></canvas> -->
+                      </div>
+                    </div>
+                </div>
+              </div>
+              
+              <!-- Porfolio Details -->
+              <div class="row" [hidden]="isPortfolioDetailsHidden">
+                <div class="grid-margin stretch-card col-lg-12" (click)="showAddStock()">
+                  <div class="card">
+                    <div class="card-body">
+              
+                      <div class="table-responsive">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>Stock Name</th>
+                                  <th>Buy Price</th>
+                                  <th>Sell Price</th>
+                                  <th>Percentage Change</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Jacob</td>
+                                  <td>53275531</td>
+                                  <td>12 May 2017</td>
+                                  <td>
+                                    <label class="badge badge-danger">Pending</label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Messsy</td>
+                                  <td>53275532</td>
+                                  <td>15 May 2017</td>
+                                  <td>
+                                    <label class="badge badge-warning">In progress</label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>John</td>
+                                  <td>53275533</td>
+                                  <td>14 May 2017</td>
+                                  <td>
+                                    <label class="badge badge-info">Fixed</label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Peter</td>
+                                  <td>53275534</td>
+                                  <td>16 May 2017</td>
+                                  <td>
+                                    <label class="badge badge-success">Completed</label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Dave</td>
+                                  <td>53275535</td>
+                                  <td>20 May 2017</td>
+                                  <td>
+                                    <label class="badge badge-warning">In progress</label>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Add Stock -->
+              <div class="row" [hidden]="isAddStockHidden">
+                  <div class="grid-margin stretch-card col-lg-12">
+                    <div class="card">
+                      <div class="card-body">
+                          <form class="forms-sample">
+                              <div class="form-group">
+                                <label for="exampleInputName1">Stock Name</label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputEmail3">Buy Price</label>
+                                <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword4">Quantity</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword4">Buy Date</label>
+                                <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                              </div>
+                              <button type="submit" class="btn btn-success mr-2">Submit</button>
+                              <button class="btn btn-light" (click)="showPortfolio()">Back To Portfolio</button>
+                            </form>
+                      </div>
+                    </div>
+                  </div>
+                
+              
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+              <div class="container-fluid clearfix pull-right">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+                  All rights reserved.</span>
+                
+              </div>
+            </footer>
+            <!-- partial -->
+          </div>
+    </div>
+  </div>
