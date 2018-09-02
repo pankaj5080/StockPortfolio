@@ -1,0 +1,40 @@
+  <div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h3 >{{portfolio.name}}</h3>
+        <div style="display: block;">
+          <canvas baseChart width="850" height="400"
+                      [datasets]="lineChartData"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [legend]="lineChartLegend"
+                      [chartType]="lineChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+          </div>
+        <span>Portfolio Strategy: {{portfolio.strategy}}</span><br/><br/>
+        <div>
+          <span>Cash Deployed: {{portfolio.cashDeployed}}</span>
+          <span style="float:right">Total Profit: {{portfolio.profit}}</span>
+        </div>
+        <div>
+          <span>Cash in Hand: {{portfolio.cashInHand}}</span>
+          <span style="float:right">Percentage Gain: {{portfolio.percentageGain}}%</span>
+        </div>
+        <div class="pull-right mt-3">
+          <button type="menu" class="btn btn-icons btn-rounded btn-success" (click)="addStock()">
+            <i class="fa fa-plus"></i>
+          </button>
+          <button type="menu" class="btn btn-icons btn-rounded btn-danger">
+              <i class="fa fa-minus"></i>
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../../../assets/js/off-canvas.js"></script>
+  <script src="../../../assets/js/misc.js"></script>
+  <script src="../../../assets/js/chart.js"></script>
+<!--  <portfolio-history></portfolio-history> 
+   -->

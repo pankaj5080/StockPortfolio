@@ -1,0 +1,8 @@
+<div class="container-fluid page-body-wrapper">
+    <div class="main-panel col-lg-12">
+      <div class="content-wrapper">
+       <portfolio-card *ngFor="let portfolio of portfolioList" [portfolio]="portfolio" 
+          (portfolioClicked)="onPortfolioClick($event)" ></portfolio-card>
+      </div>
+    </div>
+  </div>  
